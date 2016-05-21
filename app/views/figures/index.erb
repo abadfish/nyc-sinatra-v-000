@@ -1,0 +1,9 @@
+<h1>Historical Figures: </h1>
+
+<% @figures.each do |figure| %>
+  <h3><a href="/figures/<%= figure.id %>"><%= figure.name %></h3>
+<% end %>
+
+<form action="/figures/new" method="get">
+  <input type="submit" value="Create New Figure">
+</form>

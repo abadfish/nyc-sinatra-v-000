@@ -1,0 +1,22 @@
+<h1><%= @figure.name.upcase %></h1>
+
+  <h2>Name: <%= @figure.name %></h2>
+
+  <h2>Landmarks:</h2>
+
+    <% @figure.landmarks.each do |landmark| %>
+      <%= landmark.name %>
+      <h4><%= landmark.year_completed %></h4>
+    <% end %>
+  <h2>Titles:</h2>
+    <h4><%= @figure.titles %></h4>
+
+<form action="/figures/<%= @figure.id %>/edit" method="get">
+  <input type="submit" value="Edit Figure">
+</form>
+
+<br></br>
+
+<form action="/figures" method="get">
+  <input type="submit" value="All Figures">
+</form>

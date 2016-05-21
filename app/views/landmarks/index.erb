@@ -1,0 +1,10 @@
+<h1>Landmarks</h1>
+
+<% @landmarks.each do |landmark| %>
+  <h3><a href="/landmarks/<%= landmark.id %>"><%= landmark.name %> (<%= landmark.year_completed %>)</h3>
+<% end %>
+
+<form action="/landmarks/new" method="GET">
+  <h2><input type="submit" value="Add New Landmark"></h2>
+
+</form>
